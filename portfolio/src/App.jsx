@@ -1,7 +1,13 @@
-export default function App() {
+import React from 'react';
+import Hero from './components/Hero';
+import './index.css';
+
+function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-900 text-white">
-      <h1 className="text-4xl">Hello, Tailwind CSS!</h1>
+    <div className="App">
+      <Hero />
     </div>
   );
 }
+
+export default App;
