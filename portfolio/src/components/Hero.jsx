@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import { TypeAnimation } from 'react-type-animation';
 import {motion , AnimatePresence} from 'framer-motion';
 import Confetti from 'react-confetti';
+import profileImage from '../assets/jyothishree-profile.jpeg';
 
 const Hero = () => {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -65,7 +66,7 @@ const Hero = () => {
                     MERN STACK DEVELOPER
                     </h2>
               <p className="max-w-xl text-[#F2E9E4] text-[18px] font-mono">
-              I  build web applications with the MERN stack , solve DSA in Python,and share my learnings through blogs.     
+              I  build web applications with  MERN stack, solve DSA in Python ,and share my learnings through blogs.     
               I occasionally dive into open-source contributions and constantly explore new technologies to stay ahead. And when the tech world gets overwhelming, you’ll find me escaping into a book—because staying sane is just as important as staying updated.
               </p>
             </div>
@@ -131,6 +132,7 @@ const Hero = () => {
           {/* Right Side: Image Placeholder */}
           <div className="w-96 h-96 bg-[#6A6C8A] rounded-lg">
             {/* Your image will go here */}
+            <img src={profileImage} alt="Your Name" className="w-full h-full object-cover rounded-lg" />
           </div>
         </div>
       </div>

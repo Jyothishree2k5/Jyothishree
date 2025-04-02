@@ -13,14 +13,7 @@ const Navigation = () => {
   return (
     <nav className="p-6 bg-[#C9ADA7]   mx-auto">
       <div className="flex justify-between items-center gap-20 flex-wrap">
-        <Button 
-          variant="outline" 
-          className="text-[#F2E9E4] bg-[#9A8C98] hover:bg-[#9A8C98]  hover:text-[#F2E9E4] hover:shadow-xl
-    transition-all duration-300 ease-in-out flex-1 border-none"
-          onClick={() => scrollToSection('about')}
-        >
-          About me
-        </Button>
+       
         <Button 
           variant="outline" 
           className="text-[#F2E9E4] bg-[#9A8C98] hover:bg-[#9A8C98]  hover:text-[#F2E9E4] hover:shadow-xl
@@ -45,14 +38,7 @@ const Navigation = () => {
         >
           Experience
         </Button>
-        <Button 
-          variant="outline" 
-          className="text-[#F2E9E4] bg-[#9A8C98] hover:bg-[#9A8C98] hover:text-[#F2E9E4] hover:shadow-xl
-    transition-all duration-300 ease-in-out flex-1 border-none"
-          onClick={() => scrollToSection('blogs')}
-        >
-          Blogs
-        </Button>
+        
         <Button 
           variant="outline" 
           className="text-[#F2E9E4] bg-[#9A8C98] hover:bg-[#9A8C98] hover:text-[#F2E9E4] hover:shadow-xl

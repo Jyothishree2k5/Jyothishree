@@ -3,6 +3,7 @@ import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import Travel from '../assets/travel.png';
 import Blog from '../assets/blog.png';
+import gemini from '../assets/gemini.png';
 
 const Projects = () => {
   const projects = [
@@ -25,7 +26,7 @@ const Projects = () => {
     {
         title: "Gemini Clone",
         description: "Built the search engine using React.js and useContext Hook.",
-        image: "",
+        image: gemini,
         technologies: ["React"],
         liveLink: "",
         githubLink: "https://github.com/Jyothishree2k5/Gemini-Clone-Project"
@@ -42,7 +43,7 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-4xl font-mono text-[#F2E9E4] text-center mb-16"
         >
-          Projects
+          PROJECTS
         </motion.h2>
 
         {/* Projects Carousel */}
@@ -85,7 +86,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="px-3 py-1 bg-[#4A4E69] text-[#F2E9E4] rounded-full text-sm"
+                        className="px-3 py-1 bg-[#484A63] text-[#F2E9E4] rounded-full text-sm"
                       >
                         {tech}
                       </span>
@@ -98,7 +99,7 @@ const Projects = () => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#4A4E69] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all"
+                      className="px-4 py-2 bg-[#484A63] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all"
                     >
                       Live Demo
                     </a>
@@ -106,7 +107,7 @@ const Projects = () => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#4A4E69] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all"
+                      className="px-4 py-2 bg-[#484A63] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all"
                     >
                       GitHub
                     </a>
