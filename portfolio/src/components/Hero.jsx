@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 import { TypeAnimation } from 'react-type-animation';
 import {motion , AnimatePresence} from 'framer-motion';
 
-import profileImage from '../assets/jyothishree-profile.jpeg';
+import profileImage from '/jyothishree-profile.jpeg';
 import myCV from '../assets/Resume.pdf'
 
 const Hero = () => {
