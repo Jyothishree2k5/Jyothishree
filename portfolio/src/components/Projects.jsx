@@ -1,9 +1,9 @@
 // src/components/Projects.jsx
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import Travel from '/public/Travel.png';
-import Blog from '/public/Blog.png';
-import gemini from '/public/gemini.png';
+import Travel from '/Travel.png';
+import Blog from '/Blog.png';
+import gemini from '/gemini.png';
 
 const Projects = () => {
   const projects = [
