@@ -3,37 +3,25 @@ import React ,{useState} from 'react';
 import Navigation from './Navigation';
 import { TypeAnimation } from 'react-type-animation';
 import {motion , AnimatePresence} from 'framer-motion';
-import Confetti from 'react-confetti';
+
 import profileImage from '../assets/jyothishree-profile.jpeg';
+import myCV from '../assets/Resume.pdf'
 
 const Hero = () => {
-  const [showConfetti, setShowConfetti] = useState(false);
-  const [showMessage, setShowMessage] = useState(false);
-  const handleClick = (e) => {
-    e.preventDefault(); // Prevent default download behavior
-    setShowConfetti(true);
-    setShowMessage(true);
-    
-    // Hide confetti after 5 seconds
-    setTimeout(() => {
-      setShowConfetti(false);
-    }, 5000);
 
-    // Hide message after 3 seconds
-    setTimeout(() => {
-      setShowMessage(false);
-    }, 3000);
+  const handleClick = () => {
+    // Create a link element
+    e.preventDefault();
+    const link = document.createElement('a');
+    link.href = myCV;
+    link.download = 'JyothishreeRajkumar_CV.pdf';  // This will be the downloaded file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   return (
     <div className="bg-[#484A63] min-h-screen font-sans">
-      {showConfetti && (
-        <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
-          recycle={false}
-          numberOfPieces={500}
-        />
-      )}
+      
 
      
       
@@ -63,7 +51,7 @@ const Hero = () => {
                       repeat={Infinity}
                     />
                   <h2 className="text-2xl pl-28 font-mono text-[#F2E9E4] pb-10">
-                    MERN STACK DEVELOPER
+                    FULL STACK DEVELOPER
                     </h2>
               <p className="max-w-xl text-[#F2E9E4] text-[18px] font-mono">
               I  build web applications with  MERN stack, solve DSA in Python ,and share my learnings through blogs.     
@@ -81,30 +69,13 @@ const Hero = () => {
 
             <div className="pt-4 pl-36 relative">
               {/* Message Popup */}
-              <AnimatePresence>
-                {showMessage && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute -top-16 left-0 z-50"
-                  >
-                    <div className="bg-[#C9ADA7] text-[#F2E9E4] ml-20 px-4 py-2 rounded-lg shadow-lg">
-                      <p className="font-mono text-sm whitespace-nowrap">Oops! That's confidential! ,🤫. You got click baited!!</p>
-                      {/* Triangle pointer */}
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2
-                        border-l-8 border-r-8 border-t-8 
-                        border-l-transparent border-r-transparent border-t-[#C9ADA7]" />
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              
 
               {/* Download Button */}
               <motion.a
-                href="#"
+                href={myCV}
                 onClick={handleClick}
+               download="JyothishreeRajkumar_CV.pdf"
                 className="inline-flex items-center px-6 py-3
                   bg-[#C9ADA7] text-[#F2E9E4] rounded-lg font-mono
                   transition-all duration-300 ease-in-out
@@ -130,9 +101,56 @@ const Hero = () => {
 
 
           {/* Right Side: Image Placeholder */}
-          <div className="w-96 h-96 bg-[#6A6C8A] rounded-lg">
-            {/* Your image will go here */}
-            <img src={profileImage} alt="Your Name" className="w-full h-full object-cover rounded-lg" />
+          <div className="flex flex-col items-center"></div>
+                    <div className="relative w-96 h-96">
+            {/* Outer glow container */}
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#C9ADA7] to-[#9A8C98] blur-xl opacity-70 animate-pulse"></div>
+            
+            {/* Image container with border effects */}
+            <div className="relative w-full h-full rounded-lg overflow-hidden
+                            border-4 border-[#C9ADA7]
+                            shadow-[0_0_15px_rgba(201,173,167,0.5)]
+                            transform transition-all duration-300 hover:scale-102">
+              <img 
+                src={profileImage} 
+                alt="Your Name" 
+                className="w-full h-full object-cover rounded-lg
+                          transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className=" pl-28 flex gap-10 mt-6">
+            <a href="https://leetcode.com/u/JyothishreeR/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transform transition-transform duration-300 hover:scale-110">
+              <img 
+                src="https://img.icons8.com/?size=100&id=9L16NypUzu38&format=png&color=000000" 
+                alt="Leetcode" 
+                className="w-10 h-10 hover:opacity-80 p-1 bg-[#C9ADA7] rounded-lg"
+              />
+            </a>
+            <a href="https://www.codechef.com/users/jyothishree" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transform transition-transform duration-300 hover:scale-110">
+              <img 
+                src="https://img.icons8.com/?size=100&id=vAtJFm3hwtQw&format=png&color=000000" 
+                alt="Codechef" 
+                className="w-10 h-10 hover:opacity-80 p-1 bg-[#C9ADA7] rounded-lg"
+              />
+            </a>
+            <a href="https://www.geeksforgeeks.org/user/jyothishren8tb" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transform transition-transform duration-300 hover:scale-110">
+              <img 
+                src="https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000" 
+                alt="GeeksforGeeks" 
+                className="w-10 h-10 hover:opacity-80 p-1 bg-[#C9ADA7] rounded-lg"
+              />
+            </a>
+</div>
+            
           </div>
         </div>
       </div>
