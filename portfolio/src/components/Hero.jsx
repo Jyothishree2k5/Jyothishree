@@ -20,7 +20,7 @@ const Hero = () => {
     document.body.removeChild(link);
   };
   return (
-    <div className="bg-[#484A63] min-h-screen font-sans pt-20">
+    <div className="bg-[#484A63] font-sans pt-20 pb-8 md:pb-16">
       
 
      
