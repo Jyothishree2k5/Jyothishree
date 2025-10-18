@@ -60,11 +60,11 @@ const Hero = () => {
             </div>
 
             <div className="pt-4 flex justify-center lg:justify-start gap-4">
-              {/* Download Button */}
+              {/* Resume Button */}
               <motion.a
-                href={myCV}
-                onClick={handleClick}
-               download="JyothishreeRajkumar_CV.pdf"
+                href="https://drive.google.com/file/d/1aws0d1CHLFj_V6-wWoCt7xMPx9Rod_xC/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 md:px-6 md:py-3
                   bg-[#C9ADA7] text-[#F2E9E4] rounded-lg font-mono
                   transition-all duration-300 ease-in-out
@@ -80,9 +80,9 @@ const Hero = () => {
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
                 >
-                  <path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Download CV
+                Resume
               </motion.a>
               
               {/* LeetCode Profile */}
