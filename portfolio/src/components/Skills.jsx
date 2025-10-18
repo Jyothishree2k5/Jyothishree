@@ -34,25 +34,25 @@ const Skills = () => {
           ease: "easeInOut"
         }}
         whileHover={{ scale: 1.1 }}
-        className="p-4"
+        className="p-2 md:p-4"
       >
         <img 
           src={icon} 
           alt="skill"
-          className="w-16 h-16 md:w-20 md:h-20 object-contain"
+          className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
         />
       </motion.div>
     );
   };
 
   return (
-    <section id="skills" className="min-h-screen bg-[#484A63] py-20">
+    <section id="skills" className="min-h-screen bg-[#484A63] py-12 md:py-20">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-mono text-[#F2E9E4] text-center mb-16"
+          className="text-2xl md:text-3xl lg:text-4xl font-mono text-[#F2E9E4] text-center mb-8 md:mb-16"
         >
           SKILLS
         </motion.h2>
@@ -61,9 +61,9 @@ const Skills = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#C9ADA7] p-8 rounded-lg shadow-xl"
+          className="bg-[#C9ADA7] p-4 md:p-8 rounded-lg shadow-xl"
         >
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 md:gap-8 justify-items-center">
             {skillsData.map((skill, index) => (
               <SkillIcon key={index} icon={skill.icon} />
             ))}

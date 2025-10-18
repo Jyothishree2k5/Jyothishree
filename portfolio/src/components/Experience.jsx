@@ -17,9 +17,9 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 font-mono bg-[#484A63] relative">
+    <section id="experience" className="py-12 md:py-16 font-mono bg-[#484A63] relative">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-mono text-[#F2E9E4] text-center mb-16">EXPERIENCE</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-mono text-[#F2E9E4] text-center mb-8 md:mb-16">EXPERIENCE</h2>
         
         <div className="relative">
           {/* Curved road-like connecting path */}
@@ -73,7 +73,7 @@ const Experience = () => {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="w-[calc(50%-3rem)] relative"
+                  className="w-[calc(50%-3rem)] relative z-10"
                 >
                   {/* Connection point */}
                   <div className="absolute top-1/2 transform -translate-y-1/2 z-10"
@@ -91,23 +91,23 @@ const Experience = () => {
                   </div>
 
                   {/* Card content */}
-                  <div className="backdrop-blur-lg bg-[#C9ADA7]/80 rounded-lg p-6 
+                  <div className="backdrop-blur-lg bg-[#C9ADA7]/80 rounded-lg p-4 md:p-6 
                               border border-[#F2E9E4]/20 hover:border-[#F2E9E4]/40 
                               transition-all duration-300 transform hover:-translate-y-2
                               shadow-md">
                     <div className="relative">
-                      <div className="absolute -top-4 -left-4 w-12 h-12 bg-[#484A63] 
+                      <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-10 h-10 md:w-12 md:h-12 bg-[#484A63] 
                                     rounded-lg flex items-center justify-center 
-                                    text-[#F2E9E4] text-xl font-bold">
+                                    text-[#F2E9E4] text-lg md:text-xl font-bold">
                         {index + 1}
                       </div>
-                      <div className="ml-8">
-                        <h3 className="text-xl font-semibold  mb-2 ml-2">{exp.title}</h3>
-                        <p className="text-gray-700">{exp.company}</p>
-                        <p className="text-gray-700 text-sm mb-4">{exp.duration}</p>
+                      <div className="ml-6 md:ml-8">
+                        <h3 className="text-lg md:text-xl font-semibold mb-2 ml-1 md:ml-2">{exp.title}</h3>
+                        <p className="text-gray-700 text-sm md:text-base">{exp.company}</p>
+                        <p className="text-gray-700 text-xs md:text-sm mb-4">{exp.duration}</p>
                         <ul className="mt-4 list-disc list-inside space-y-2">
                           {exp.description.map((item, idx) => (
-                            <li key={idx} className="text-gray-700">
+                            <li key={idx} className="text-gray-700 text-sm md:text-base">
                               {item}
                             </li>
                           ))}

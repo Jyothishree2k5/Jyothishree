@@ -20,7 +20,7 @@ const Hero = () => {
     document.body.removeChild(link);
   };
   return (
-    <div className="bg-[#484A63] min-h-screen font-sans">
+    <div className="bg-[#484A63] min-h-screen font-sans pt-20">
       
 
      
@@ -29,10 +29,10 @@ const Hero = () => {
       <Navigation />
 
       {/* Hero Content Container */}
-      <div className="container mx-auto px-4 pt-16">
-        <div className="flex flex-row items-center justify-between">
+      <div className="container mx-auto px-4 pt-8 md:pt-16">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
           {/* Left Side: Content and Social Icons */}
-          <div className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-6 lg:space-y-8 text-center lg:text-left">
             {/* Text Content */}
             <div className="space-y-4">
                 <TypeAnimation
@@ -46,44 +46,33 @@ const Hero = () => {
 
                       ]}
                       wrapper="h1"
-                      className="text-4xl font-mono mb-10 mt-10 text-[#F2E9E4]"
+                      className="text-2xl md:text-3xl lg:text-4xl font-mono mb-6 lg:mb-10 mt-6 lg:mt-10 text-[#F2E9E4]"
                       speed={50}
                       repeat={Infinity}
                     />
-                  <h2 className="text-2xl pl-28 font-mono text-[#F2E9E4] pb-10">
-                    FULL STACK DEVELOPER
+                  <h2 className="text-lg md:text-xl lg:text-2xl font-mono text-[#F2E9E4] pb-6 lg:pb-10">
+                    BACKEND DEVELOPER
                     </h2>
-              <p className="max-w-xl text-[#F2E9E4] text-[18px] font-mono">
+              <p className="max-w-xl text-[#F2E9E4] text-sm md:text-base lg:text-[18px] font-mono leading-relaxed">
               I  build web applications with  MERN stack, solve DSA in Python ,and share my learnings through blogs.     
-              I occasionally dive into open-source contributions and constantly explore new technologies to stay ahead. And when the tech world gets overwhelming, you’ll find me escaping into a book—because staying sane is just as important as staying updated.
+              I occasionally dive into open-source contributions and constantly explore new technologies to stay ahead. And when the tech world gets overwhelming, you'll find me escaping into a book—because staying sane is just as important as staying updated.
               </p>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex space-x-8">
-              {/* Replace with actual icon components or images */}
-              <div className="text-3xl text-[#F2E9E4]"></div>
-              <div className="text-3xl text-[#F2E9E4]"></div>
-              <div className="text-3xl text-[#F2E9E4]"></div>
-            </div>
-
-            <div className="pt-4 pl-36 relative">
-              {/* Message Popup */}
-              
-
+            <div className="pt-4 flex justify-center lg:justify-start gap-4">
               {/* Download Button */}
               <motion.a
                 href={myCV}
                 onClick={handleClick}
                download="JyothishreeRajkumar_CV.pdf"
-                className="inline-flex items-center px-6 py-3
+                className="inline-flex items-center px-4 py-2 md:px-6 md:py-3
                   bg-[#C9ADA7] text-[#F2E9E4] rounded-lg font-mono
                   transition-all duration-300 ease-in-out
                   hover:bg-[#9A8C98] hover:scale-105 hover:shadow-lg
-                  active:scale-95"
+                  active:scale-95 text-sm md:text-base"
               >
                 <svg 
-                  className="w-5 h-5 mr-2" 
+                  className="w-4 h-4 md:w-5 md:h-5 mr-2" 
                   fill="none" 
                   strokeLinecap="round" 
                   strokeLinejoin="round" 
@@ -95,62 +84,45 @@ const Hero = () => {
                 </svg>
                 Download CV
               </motion.a>
+              
+              {/* LeetCode Profile */}
+              <a href="https://leetcode.com/u/JyothishreeR/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 md:px-6 md:py-3
+                  bg-[#C9ADA7] text-[#F2E9E4] rounded-lg font-mono
+                  transition-all duration-300 ease-in-out
+                  hover:bg-[#9A8C98] hover:scale-105 hover:shadow-lg
+                  active:scale-95 text-sm md:text-base">
+                <img 
+                  src="https://img.icons8.com/?size=100&id=9L16NypUzu38&format=png&color=000000" 
+                  alt="Leetcode" 
+                  className="w-4 h-4 md:w-5 md:h-5 mr-2"
+                />
+                LeetCode
+              </a>
             </div>
           </div>
 
-
-
-          {/* Right Side: Image Placeholder */}
-          <div className="flex flex-col items-center"></div>
-                    <div className="relative w-96 h-96">
-            {/* Outer glow container */}
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#C9ADA7] to-[#9A8C98] blur-xl opacity-70 animate-pulse"></div>
-            
-            {/* Image container with border effects */}
-            <div className="relative w-full h-full rounded-lg overflow-hidden
-                            border-4 border-[#C9ADA7]
-                            shadow-[0_0_15px_rgba(201,173,167,0.5)]
-                            transform transition-all duration-300 hover:scale-102">
-              <img 
-                src={profileImage} 
-                alt="Your Name" 
-                className="w-full h-full object-cover rounded-lg
-                          transition-transform duration-300 hover:scale-105"
-              />
+          {/* Right Side: Image */}
+          <div className="flex flex-col items-center mt-8 lg:mt-0">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              {/* Outer glow container */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#C9ADA7] to-[#9A8C98] blur-xl opacity-70 animate-pulse"></div>
+              
+              {/* Image container with border effects */}
+              <div className="relative w-full h-full rounded-lg overflow-hidden
+                              border-4 border-[#C9ADA7]
+                              shadow-[0_0_15px_rgba(201,173,167,0.5)]
+                              transform transition-all duration-300 hover:scale-102">
+                <img 
+                  src={profileImage} 
+                  alt="Your Name" 
+                  className="w-full h-full object-cover  rounded-lg
+                            transition-transform duration-300 hover:scale-105"
+                />
+              </div>
             </div>
-            <div className=" pl-28 flex gap-10 mt-6">
-            <a href="https://leetcode.com/u/JyothishreeR/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="transform transition-transform duration-300 hover:scale-110">
-              <img 
-                src="https://img.icons8.com/?size=100&id=9L16NypUzu38&format=png&color=000000" 
-                alt="Leetcode" 
-                className="w-10 h-10 hover:opacity-80 p-1 bg-[#C9ADA7] rounded-lg"
-              />
-            </a>
-            <a href="https://www.codechef.com/users/jyothishree" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="transform transition-transform duration-300 hover:scale-110">
-              <img 
-                src="https://img.icons8.com/?size=100&id=vAtJFm3hwtQw&format=png&color=000000" 
-                alt="Codechef" 
-                className="w-10 h-10 hover:opacity-80 p-1 bg-[#C9ADA7] rounded-lg"
-              />
-            </a>
-            <a href="https://www.geeksforgeeks.org/user/jyothishren8tb" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="transform transition-transform duration-300 hover:scale-110">
-              <img 
-                src="https://img.icons8.com/?size=100&id=AbQBhN9v62Ob&format=png&color=000000" 
-                alt="GeeksforGeeks" 
-                className="w-10 h-10 hover:opacity-80 p-1 bg-[#C9ADA7] rounded-lg"
-              />
-            </a>
-</div>
-            
           </div>
         </div>
       </div>

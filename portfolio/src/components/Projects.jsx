@@ -35,13 +35,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen bg-[#484A63] py-20 overflow-hidden">
+    <section id="projects" className="min-h-screen bg-[#484A63] py-12 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-mono text-[#F2E9E4] text-center mb-16"
+          className="text-2xl md:text-3xl lg:text-4xl font-mono text-[#F2E9E4] text-center mb-8 md:mb-16"
         >
           PROJECTS
         </motion.h2>
@@ -64,11 +64,11 @@ const Projects = () => {
             {[...projects, ...projects].map((project, index) => (
               <motion.div
                 key={index}
-                className="min-w-[300px] md:min-w-[400px] bg-[#C9ADA7] rounded-lg shadow-xl overflow-hidden"
+                className="min-w-[280px] sm:min-w-[320px] md:min-w-[400px] bg-[#C9ADA7] rounded-lg shadow-xl overflow-hidden"
                 whileHover={{ scale: 1.02 }}
               >
                 {/* Project Image */}
-                <div className="h-48 bg-gray-200 overflow-hidden">
+                <div className="h-40 md:h-48 bg-gray-200 overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
@@ -77,9 +77,9 @@ const Projects = () => {
                 </div>
 
                 {/* Project Info */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-gray-700 mb-4">{project.description}</p>
+                <div className="p-4 md:p-6">
+                  <h3 className="text-lg md:text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-700 mb-4 text-sm md:text-base">{project.description}</p>
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -94,12 +94,12 @@ const Projects = () => {
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-4">
+                  <div className="flex gap-2 md:gap-4 flex-wrap">
                     <a 
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#484A63] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all"
+                      className="px-3 py-2 md:px-4 md:py-2 bg-[#484A63] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all text-sm md:text-base"
                     >
                       Live Demo
                     </a>
@@ -107,7 +107,7 @@ const Projects = () => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#484A63] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all"
+                      className="px-3 py-2 md:px-4 md:py-2 bg-[#484A63] text-[#F2E9E4] rounded-md hover:bg-opacity-90 transition-all text-sm md:text-base"
                     >
                       GitHub
                     </a>
